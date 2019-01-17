@@ -23,4 +23,6 @@ exports.connection = (req, res, next) => {
       next(err);
     }
   });
+  
+  res.render('home');
 }
