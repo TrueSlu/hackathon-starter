@@ -24,5 +24,9 @@ exports.connection = (req, res, next) => {
     }
   });
   
-  res.redirect(req.params.ref);
+  if (req.query.ref) {
+    res.redirect(req.query.ref);
+  } else {
+    res.render('home');
+  }
 }
