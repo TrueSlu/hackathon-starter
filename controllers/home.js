@@ -11,10 +11,9 @@ exports.index = (req, res) => {
 };
 
 exports.connection = (req, res, next) => {
-  console.log(req.params.con);
   
   const newCon = new Con({
-    text: req.params.con,
+    text: req.query.con,
   });
   
   newCon.save((err) => {
